@@ -1,0 +1,138 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+
+#parallax-section {
+    position: relative;
+    height: 500px; /* Ajusta la altura según necesites */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.parallax-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+#image-slider {
+    padding: 2rem;
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    height: 300px; /* Ajusta la altura según tus imágenes */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slider-controls {
+    margin-top: 1rem;
+}
+
+.slider-controls button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+#svg-animation {
+    padding: 2rem;
+    text-align: center;
+}
+
+.svg-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+}
+
+.svg-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos Responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem;
+    }
+
+    #parallax-section {
+        height: 400px;
+    }
+
+    .parallax-content {
+        padding: 1.5rem;
+    }
+
+    .slider-container {
+        width: 95%;
+        height: 200px;
+    }
+
+    .slider-controls button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    #svg-animation {
+        padding: 1.5rem;
+    }
+}
